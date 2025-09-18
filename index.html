@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>msyncs.de – mind synchronization</title>
+  <meta name="description" content="msyncs.de – mind synchronization: Cloud, Embedded Systems/IoT, Linux & Administration. Projekte, Wissen und Services von msyncs." />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="msyncs.de – mind synchronization" />
+  <meta property="og:description" content="Cloud · Embedded/IoT · Linux · Administration" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preload" as="image" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- ====== Header / Nav ====== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="branding" href="#top" aria-label="msyncs Startseite">
+        <img src="assets/logo.png" alt="msyncs Logo" class="logo" />
+        <span class="brand-text">msyncs<span class="brand-dot">.</span>de</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="#about">Über</a>
+        <a href="#focus">Themen</a>
+        <a href="#projects">Projekte</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact" class="btn btn--ghost">Kontakt</a>
+        <button id="themeToggle" class="icon-btn" aria-label="Theme umschalten" title="Theme umschalten">
+          <!-- simple sun/moon icon via CSS -->
+          <span class="icon-theme"></span>
+        </button>
+        <button id="mobileToggle" class="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <a href="#about">Über</a>
+      <a href="#focus">Themen</a>
+      <a href="#projects">Projekte</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact" class="btn btn--ghost">Kontakt</a>
+    </div>
+  </header>
+
+  <!-- ====== Hero ====== -->
+  <main id="top">
+    <section class="hero container">
+      <div class="hero__content">
+        <h1 class="reveal">
+          mind <span class="accent">synchronization</span><br />
+          <span class="sub">Ideen → Systeme → Wirkung</span>
+        </h1>
+        <p class="lead reveal">
+          Ich verbinde <strong>Cloud</strong>, <strong>Embedded/IoT</strong>, <strong>Linux</strong> und
+          <strong>Admin&nbsp;Ops</strong> zu robusten, realen Lösungen – vom Microcontroller bis zur skalierenden Plattform.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary">Projekte ansehen</a>
+          <a href="#contact" class="btn btn--ghost">Anfragen</a>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <!-- Aesthetic SVG circuit motif -->
+        <svg viewBox="0 0 600 600" class="circuit">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%">
+              <stop offset="0%" stop-color="var(--accent-500)" stop-opacity="0.9"/>
+              <stop offset="60%" stop-color="var(--accent-500)" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="300" cy="300" r="200" fill="url(#glow)"></circle>
+          <g stroke="var(--line)" stroke-width="2" fill="none" stroke-linecap="round">
+            <rect x="170" y="170" width="260" height="260" rx="24"></rect>
+            <rect x="230" y="230" width="140" height="140" rx="16"></rect>
+            <!-- pins -->
+            <g>
+              <line x1="210" y1="150" x2="210" y2="170"></line>
+              <line x1="250" y1="150" x2="250" y2="170"></line>
+              <line x1="290" y1="150" x2="290" y2="170"></line>
+              <line x1="330" y1="150" x2="330" y2="170"></line>
+              <line x1="370" y1="150" x2="370" y2="170"></line>
+              <line x1="450" y1="210" x2="430" y2="210"></line>
+              <line x1="450" y1="250" x2="430" y2="250"></line>
+              <line x1="450" y1="290" x2="430" y2="290"></line>
+              <line x1="450" y1="330" x2="430" y2="330"></line>
+              <line x1="150" y1="210" x2="170" y2="210"></line>
+              <line x1="150" y1="250" x2="170" y2="250"></line>
+              <line x1="150" y1="290" x2="170" y2="290"></line>
+              <line x1="150" y1="330" x2="170" y2="330"></line>
+              <line x1="210" y1="450" x2="210" y2="430"></line>
+              <line x1="250" y1="450" x2="250" y2="430"></line>
+              <line x1="290" y1="450" x2="290" y2="430"></line>
+              <line x1="330" y1="450" x2="330" y2="430"></line>
+              <line x1="370" y1="450" x2="370" y2="430"></line>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ====== About ====== -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Über msyncs</h2>
+        <p class="section-sub">Denken synchronisieren, Systeme verbinden, Wert schaffen.</p>
+      </div>
+      <div class="grid grid--2">
+        <p class="card card--soft reveal">
+          Hinter <strong>msyncs</strong> steckt die Idee, Wissen aus verschiedenen Disziplinen
+          zu bündeln und <em>end-to-end</em> umzusetzen: vom Sensor über Edge-Verarbeitung,
+          sichere Cloud-Pipelines, Observability und Automatisierung bis zur Benutzerschnittstelle.
+        </p>
+        <p class="card card--soft reveal">
+          Ich setze auf <strong>klare Architektur</strong>, <strong>robuste Implementierung</strong> und
+          <strong>transparente Dokumentation</strong> – damit aus Prototypen stabile Produkte werden.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== Focus Areas ====== -->
+    <section id="focus" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Themenfelder</h2>
+        <p class="section-sub">Cloud · Embedded/IoT · Linux · Administration</p>
+      </div>
+
+      <div class="grid grid--4">
+        <!-- Cloud -->
+        <article class="focus card reveal">
+          <div class="focus__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11-1 3.5 3.5 0 0 0 1 9z" fill="currentColor"/></svg>
+          </div>
+          <h3>Cloud</h3>
+          <p>CI/CD, Container, Edge-to-Cloud-Pipelines, IaC, Observability, GitOps.</p>
+          <ul class="chips">
+            <li>Kubernetes</li><li>Docker</li><li>Cloudflare</li><li>GitHub Actions</li>
+          </ul>
+        </article>
+
+        <!-- Embedded / IoT -->
+        <article class="focus card reveal">
+          <div class="focus__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4h4v8h-4v4H8v-4H4V8h4V4z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+          </div>
+          <h3>Embedded &amp; IoT</h3>
+          <p>ESP32/STM32, Low-Power-Design, Sensorik, Protokolle, Edge-ML.</p>
+          <ul class="chips">
+            <li>ESP-IDF</li><li>LoRa</li><li>RMT/ULP</li><li>YOLO</li>
+          </ul>
+        </article>
+
+        <!-- Linux -->
+        <article class="focus card reveal">
+          <div class="focus__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M5 5h8a4 4 0 0 1 4 4v10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Linux</h3>
+          <p>Systemdesign, Performance-Tuning, Security-Hardening, Networking.</p>
+          <ul class="chips">
+            <li>CachyOS</li><li>Debian</li><li>systemd</li><li>iptables/nft</li>
+          </ul>
+        </article>
+
+        <!-- Administration -->
+        <article class="focus card reveal">
+          <div class="focus__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+          </div>
+          <h3>Administration</h3>
+          <p>Automatisierung, Backups, Monitoring, Policies, Doku – zuverlässig & reproduzierbar.</p>
+          <ul class="chips">
+            <li>Ansible</li><li>Grafana/Influx</li><li>Nginx</li><li>Proxmox</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====== Projects ====== -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Ausgewählte Projekte</h2>
+        <p class="section-sub">Eine kleine Auswahl – mehr auf Anfrage.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card card--hover reveal">
+          <h3>Edge-Mailbox Notifier</h3>
+          <p>IR-Lichtschranke mit ESP32 (ULP/RMT), robustes Sampling, Hysterese-Logik, Web-UI.
+          Optional LoRa-Anbindung und Home-Integration.</p>
+          <ul class="list">
+            <li>FreeRTOS-Tasks, Interrupt-sichere Verarbeitung</li>
+            <li>Low-Power-Design, Watchdog-Strategien</li>
+            <li>Grafana-Dashboard via InfluxDB</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal">
+          <h3>Traffic Analytics mit YOLO &amp; FIWARE</h3>
+          <p>Objekterkennung in Straßenverkehrsvideos, Zählung/Tracking,
+          Integration in FIWARE für urbane Mobilität.</p>
+          <ul class="list">
+            <li>YOLOv8 Pipeline</li>
+            <li>REST/NGSI Schnittstellen</li>
+            <li>Qualitätsbewertung Tag/Nacht/Wetter</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal">
+          <h3>Cloud-native Toolchains</h3>
+          <p>GitOps-Setup mit GitHub Actions, Container Registry, Preview-Deployments,
+          SSL-Terminations via Cloudflare/Nginx.</p>
+          <ul class="list">
+            <li>IaC (Terraform/Ansible)</li>
+            <li>Observability (Prom/Grafana)</li>
+            <li>Zero-Downtime Deploy</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====== Stack ====== -->
+    <section id="stack" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Tech-Stack</h2>
+        <p class="section-sub">Werkzeuge, mit denen ich täglich arbeite.</p>
+      </div>
+
+      <div class="stack-cloud card reveal">
+        <h3>Toolbox</h3>
+        <div class="tags">
+          <span>ESP-IDF</span><span>PlatformIO</span><span>C/C++</span><span>Python</span>
+          <span>Docker</span><span>Kubernetes</span><span>Helm</span><span>GitHub Actions</span>
+          <span>Terraform</span><span>Ansible</span><span>Nginx</span><span>Grafana</span>
+          <span>InfluxDB</span><span>MQTT</span><span>LoRa</span><span>Linux</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Contact ====== -->
+    <section id="contact" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Kontakt</h2>
+        <p class="section-sub">Projektidee, Kooperation oder Frage? Melde dich gern.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <form id="contactForm" class="card card--soft reveal" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Senden</button>
+            <p class="form-hint" id="formHint" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <aside class="card card--soft reveal">
+          <h3>Direkt</h3>
+          <ul class="contact-list">
+            <li><strong>E-Mail:</strong> <a href="mailto:hi@msyncs.de">hi@msyncs.de</a></li>
+            <li><strong>GitHub:</strong> <a href="#" rel="nofollow">github.com/msyncs</a></li>
+            <li><strong>LinkedIn:</strong> <a href="#" rel="nofollow">linkedin.com/in/msyncs</a></li>
+          </ul>
+          <p class="muted">* Platzhalter-Links – einfach anpassen.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="" class="logo" />
+        <span>msyncs.de</span>
+      </div>
+      <div class="footer-links">
+        <a href="#about">Über</a>
+        <a href="#focus">Themen</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+      <p class="footnote">© <span id="year"></span> msyncs – mind synchronization. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
